@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northern Luzon Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="day">
+
+  <!-- Global video backgrounds (optional) -->
+  <video id="bgMainDay" class="bg-video-global" autoplay muted loop playsinline src="videos/day.mp4"></video>
+  <video id="bgMainNight" class="bg-video-global" autoplay muted loop playsinline src="videos/night.mp4"></video>
+
+  <div class="tv">
+    <div class="screen day">
+      <!-- Optional screen videos for theme -->
+      <video id="bgDay" class="bg-video" autoplay muted loop playsinline src="videos/day.mp4"></video>
+      <video id="bgNight" class="bg-video" autoplay muted loop playsinline src="videos/night.mp4"></video>
+
+      <div class="container">
+        <h1 class="header-title">Northern Luzon Weather</h1>
+
+        <div class="controls">
+          <input type="text" id="cityInput" placeholder="Enter city name">
+          <button id="searchBtn">Search</button>
+          <select id="unitSelect">
+            <option value="C">°C</option>
+            <option value="F">°F</option>
+          </select>
+          <button id="themeToggle" class="toggle">🌙</button>
+        </div>
+
+        <!-- Removed status placeholder -->
+        <div class="forecast" id="forecast">
+          <!-- Weather cards rendered here dynamically -->
+        </div>
+
+        <div class="footer">
+          <p>API Source: <a href="https://openweathermap.org/api" target="_blank">OpenWeatherMap</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stand"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
